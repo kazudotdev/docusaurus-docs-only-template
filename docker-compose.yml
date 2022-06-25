@@ -1,0 +1,14 @@
+services:
+  docusaurus:
+    build:
+      context: .
+    working_dir: /docs
+    volumes:
+      - .:/docs
+      - docs-node-modules:/docs/node_modules
+    command: /usr/local/bin/npm start
+    ports:
+            - 3000:3000
+    tty: true
+volumes:
+  docs-node-modules:
