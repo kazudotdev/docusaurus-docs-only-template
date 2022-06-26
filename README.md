@@ -22,6 +22,10 @@ This command starts a local development server and opens up a browser window. Mo
 ```
 $ docker compose build
 ```
+* Install node_modules (only once)
+```
+$ docker compose run --rm docusaurus npm install
+```
 * Run your server on the Docker
 ```
 $ docker compose up -d
